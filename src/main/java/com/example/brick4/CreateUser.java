@@ -4,11 +4,16 @@ import java.util.ArrayList;
 
 public class CreateUser {
 
-    static ArrayList<User> usersArray = new ArrayList <>();
+    private static ArrayList<User> usersArray = new ArrayList <>();
+
+    public static ArrayList<User> getUsersArray() {
+        return usersArray;
+    }
+
 
     public static void createUser(String email, String password, boolean status, String name){
 
-        ArrayList<Transaction> transactionsHistory = new ArrayList <>();
+        TransactionsHistory transactionsHistory = new TransactionsHistory(email, Transaction.createTransactionsHistory());
 
         CardNumber cardNumber = new CardNumber("8890", CardNumber.numberCreator(), email);
 

@@ -19,7 +19,7 @@
             <Insets bottom="10.0" top="10.0"/>
         </padding>
     </Label>
-
+        <Label fx:id="MessageValue"></Label>
     <Label>Email:</Label>
         <TextField fx:id="EmailValue"></TextField>
     <Label>Password:</Label>

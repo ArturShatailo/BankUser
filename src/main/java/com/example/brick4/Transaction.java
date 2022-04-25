@@ -1,5 +1,7 @@
 package com.example.brick4;
 
+import java.util.ArrayList;
+
 public class Transaction {
 
     private String number;
@@ -21,6 +23,11 @@ public class Transaction {
     @Override
     public String toString(){
         return "#"+ number + ", date: "+date+", from "+from+" to "+ to +", amount: "+ amount+"\n";
+    }
+
+    public static ArrayList createTransactionsHistory(){
+        ArrayList<Transaction> transactionsHistory = new ArrayList <>();
+        return transactionsHistory;
     }
 
 }

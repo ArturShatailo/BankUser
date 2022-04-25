@@ -6,20 +6,18 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
-public class LoginApplication extends Application {
+public class AreaApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login-page.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 340);
-        stage.setTitle("Login page");
+        FXMLLoader fxmlLoader = new FXMLLoader(AreaApplication.class.getResource("personal-area.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 520, 540);
+        stage.setTitle("Personal area");
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
-
         launch();
     }
 }

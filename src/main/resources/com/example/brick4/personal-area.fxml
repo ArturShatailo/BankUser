@@ -10,24 +10,27 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.PasswordField?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.brick4.RegisterData">
+      fx:controller="com.example.brick4.LoginData">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
-    <Label>Please sign in
+    <Label>Please sign up
         <padding>
             <Insets bottom="10.0" top="10.0"/>
         </padding>
     </Label>
+    <Label fx:id="MessageAreaValue"></Label>
+    <Label fx:id="NameAreaLabel"></Label>
+    <Label fx:id="EmailAreaLabel"></Label>
+    <padding>
+        <Insets bottom="5.0" top="5.0"/>
+    </padding>
+    <Label fx:id="CardAreaLabel"></Label>
+    <Label fx:id="BalanceAreaLabel"></Label>
+    <padding>
+        <Insets bottom="5.0" top="5.0"/>
+    </padding>
+    <Label fx:id="TransactionsAreaLabel"></Label>
 
-    <Label fx:id="MessageRegValue"></Label>
-    <Label>Full name:</Label>
-        <TextField fx:id="NameRegValue"></TextField>
-    <Label>Email:</Label>
-        <TextField fx:id="EmailRegValue"></TextField>
-    <Label fx:id="PasswordLabel">Password:</Label>
-        <PasswordField fx:id="PasswordRegValue"></PasswordField>
-    <Label>Confirm password:</Label>
-        <PasswordField fx:id="PasswordRegConfirmValue"></PasswordField>
-    <Button text="Register" onAction="#registrationButton"/>
+    <Button text="Login" onAction="#loginButton"/>
 </VBox>

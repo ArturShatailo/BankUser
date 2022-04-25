@@ -1,9 +1,30 @@
 package com.example.brick4;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.net.URL;
 import java.util.List;
 import java.util.Scanner;
 
 public class Tech {
+
+
+    public static void NewWindow(URL application, String title){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(application);
+            Scene scene = new Scene(fxmlLoader.load(), 320, 340);
+            Stage loginStage = new Stage();
+            loginStage.setTitle(title);
+            loginStage.setScene(scene);
+            loginStage.show();
+        }
+        catch (Exception exception){
+            exception.printStackTrace();
+        }
+    }
+
 
     //"GetInputFunction" is a scanner of input that returns integer number entered by user
     public static int GetInputFunction(){
@@ -32,7 +53,7 @@ public class Tech {
 
         //int random = min + (int) ( Math.random() * (max+1) );
         int random = (int) (Math.random()*(max-min))+min;
-        System.out.println("Random: "+ random+" min: "+min+" max: "+max);
+        //System.out.println("Random: "+ random+" min: "+min+" max: "+max);
         return random;
     }
 

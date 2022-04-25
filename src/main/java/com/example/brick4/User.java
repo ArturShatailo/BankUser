@@ -7,10 +7,10 @@ public class User extends Persona{
     private String name;
     private Object cardNumber;
     private Double cardBalance;
-    private ArrayList<Transaction> transactionsHistory;
+    private TransactionsHistory transactionsHistory;
 
 
-    public User(String email, String password, boolean status, String name, Object cardNumber, Double cardBalance, ArrayList transactionsHistory) {
+    public User(String email, String password, boolean status, String name, Object cardNumber, Double cardBalance, TransactionsHistory transactionsHistory) {
         super(email, password, status);
         this.name = name;
         this.cardNumber = cardNumber;
@@ -43,17 +43,17 @@ public class User extends Persona{
         this.cardBalance = cardBalance;
     }
 
-    public ArrayList<Transaction> getTransactionsHistory() {
+    public TransactionsHistory getTransactionsHistory() {
         return transactionsHistory;
     }
 
-    public void setTransactionsHistory(ArrayList<Transaction> transactionsHistory) {
+    public void setTransactionsHistory(TransactionsHistory transactionsHistory) {
         this.transactionsHistory = transactionsHistory;
     }
 
     @Override
     public String toString(){
-        return "email: "+ getEmail() + "\npassword: "+getPassword()+"\nname: "+name+"\ncard number: "+ cardNumber+"\nbalance: "+ cardBalance+"\ntransaction history: "+ transactionsHistory;
+        return "email: "+ getEmail() + "\npassword: "+getPassword()+"\nname: "+name+"\ncard number: "+ cardNumber+"\nbalance: "+ cardBalance+"\ntransaction history: "+ transactionsHistory+"\n\n";
     }
 
 
