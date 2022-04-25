@@ -12,6 +12,9 @@ public class TransactionsHistory {
         this.transactionsHistory = transactionsHistory;
     }
 
-
+    @Override
+    public String toString(){
+        return "History: "+transactionsHistory+"\n";
+    }
 
 }

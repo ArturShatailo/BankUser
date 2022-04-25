@@ -3,39 +3,36 @@ package com.example.brick4;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-import java.text.BreakIterator;
-
 public class PersonalAreaData {
 
     @FXML
-    private static Label MessageAreaValue;
+    private Label MessageAreaValue;
 
     @FXML
-    private static Label TransactionsAreaLabel;
+    private Label TransactionsAreaLabel;
 
     @FXML
-    private static Label NameAreaLabel;
+    private Label NameAreaLabel;
 
     @FXML
-    private static Label CardAreaLabel;
+    private Label CardAreaLabel;
 
     @FXML
-    private static Label EmailAreaLabel;
+    private Label EmailAreaLabel;
 
     @FXML
-    private static Label BalanceAreaLabel;
+    private Label BalanceAreaLabel;
 
-    @FXML
-    protected static void PersonalArea(User user) {
+     protected static void PersonalArea(User user) {
 
         Tech.NewWindow(AreaApplication.class.getResource("personal-area.fxml"), "personal-area");
-        NameAreaLabel.setText(user.getName());
-        EmailAreaLabel.setText(user.getEmail());
-        CardAreaLabel.setText(user.getCardNumber().toString());
-        BalanceAreaLabel.setText(user.getCardBalance().toString());
-        TransactionsAreaLabel.setText(user.getCardBalance().toString());
+        System.out.println(user.toString());
+        /*PersonalAreaData.NameAreaLabel.setText(user.getName());
+        PersonalAreaData.EmailAreaLabel.setText(user.getEmail());
+        PersonalAreaData.CardAreaLabel.setText(user.getCardNumber().toString());
+        PersonalAreaData.BalanceAreaLabel.setText(user.getCardBalance().toString());
+        TransactionsAreaLabel.setText(user.getCardBalance().toString());*/
 
     }
-
 
 }

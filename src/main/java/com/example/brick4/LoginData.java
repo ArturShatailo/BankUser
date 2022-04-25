@@ -31,12 +31,10 @@ public class LoginData {
 
                 }else{
                         MessageValue.setText("Wrong password or email");
-                        break;
                 }
 
             }else{
                 MessageValue.setText("Wrong password or email");
-                break;
             }
 
         }
