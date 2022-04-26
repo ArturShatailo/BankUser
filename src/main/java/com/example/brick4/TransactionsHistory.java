@@ -14,7 +14,7 @@ public class TransactionsHistory {
 
     @Override
     public String toString(){
-        return "History: "+transactionsHistory+"\n";
+        return "History: "+transactionsHistory;
     }
 
 }

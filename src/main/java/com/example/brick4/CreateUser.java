@@ -13,7 +13,7 @@ public class CreateUser {
 
     public static void createUser(String email, String password, boolean status, String name){
 
-        TransactionsHistory transactionsHistory = new TransactionsHistory(email, Transaction.createTransactionsHistory());
+        TransactionsHistory transactionsHistory = new TransactionsHistory(email, Transaction.createTransactionsList());
 
         CardNumber cardNumber = new CardNumber("8890", CardNumber.numberCreator(), email);
 

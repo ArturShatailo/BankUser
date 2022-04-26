@@ -18,7 +18,6 @@ public class User extends Persona{
         this.transactionsHistory = transactionsHistory;
     }
 
-
     public String getName() {
         return name;
     }
@@ -53,7 +52,7 @@ public class User extends Persona{
 
     @Override
     public String toString(){
-        return "email: "+ getEmail() + "\npassword: "+getPassword()+"\nname: "+name+"\ncard number: "+ cardNumber+"\nbalance: "+ cardBalance+"\ntransaction history: "+ transactionsHistory+"\n\n";
+        return "email: "+ getEmail() + "\npassword: "+getPassword()+"\nname: "+name+"\ncard number: "+ cardNumber+"\nbalance: "+ cardBalance+"\ntransaction history: "+ transactionsHistory+ "\nstatus: "+ status+"\n\n";
     }
 
 

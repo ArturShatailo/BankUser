@@ -1,6 +1,7 @@
 package com.example.brick4;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -14,10 +15,26 @@ public class Tech {
     public static void NewWindow(URL application, String title){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(application);
-            Scene scene = new Scene(fxmlLoader.load(), 320, 340);
+            Scene scene = new Scene(fxmlLoader.load(), 520, 540);
             Stage loginStage = new Stage();
             loginStage.setTitle(title);
             loginStage.setScene(scene);
+            loginStage.show();
+        }
+        catch (Exception exception){
+            exception.printStackTrace();
+        }
+    }
+
+    public static void NewAreaWindow(URL application, String title, User user){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(application);
+            Scene scene = new Scene(fxmlLoader.load(), 520, 540);
+            Stage loginStage = new Stage();
+            loginStage.setTitle(title);
+            loginStage.setScene(scene);
+            PersonalAreaData personalArea = fxmlLoader.getController();
+            personalArea.PersonalArea(user);
             loginStage.show();
         }
         catch (Exception exception){

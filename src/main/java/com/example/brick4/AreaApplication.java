@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class AreaApplication extends Application {
+/*public class AreaApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AreaApplication.class.getResource("personal-area.fxml"));
@@ -20,4 +20,4 @@ public class AreaApplication extends Application {
     public static void main(String[] args) {
         launch();
     }
-}
+}*/

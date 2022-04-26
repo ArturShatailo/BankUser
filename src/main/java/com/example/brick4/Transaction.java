@@ -25,7 +25,7 @@ public class Transaction {
         return "#"+ number + ", date: "+date+", from "+from+" to "+ to +", amount: "+ amount+"\n";
     }
 
-    public static ArrayList createTransactionsHistory(){
+    public static ArrayList createTransactionsList(){
         ArrayList<Transaction> transactionsHistory = new ArrayList <>();
         return transactionsHistory;
     }

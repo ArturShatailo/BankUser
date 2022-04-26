@@ -26,7 +26,8 @@ public class LoginData {
 
                 if(CreateUser.getUsersArray().get(i).getPassword().equals(PasswordValue.getText())){
 
-                    PersonalAreaData.PersonalArea(CreateUser.getUsersArray().get(i));
+                    CreateUser.getUsersArray().get(i).status = true;
+                    Tech.NewAreaWindow(getClass().getResource("personal-area.fxml"), "personal-area", CreateUser.getUsersArray().get(i));
                     break;
 
                 }else{

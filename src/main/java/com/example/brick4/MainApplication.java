@@ -7,13 +7,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/*public class RegisterApplication extends Application {
+public class MainApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(RegisterApplication.class.getResource("register-page.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 520, 540);
-        stage.setTitle("Register page");
+        stage.setTitle("Home page");
         stage.setScene(scene);
         stage.show();
     }
@@ -21,4 +21,4 @@ import java.io.IOException;
     public static void main(String[] args) {
         launch();
     }
-}*/
+}
