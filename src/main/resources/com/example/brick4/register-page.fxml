@@ -29,5 +29,5 @@
         <PasswordField fx:id="PasswordRegValue"></PasswordField>
     <Label>Confirm password:</Label>
         <PasswordField fx:id="PasswordRegConfirmValue"></PasswordField>
-    <Button text="Register" onAction="#registrationButton"/>
+    <Button fx:id="registrationButton"  text="Register" onAction="#registrationButton"/>
 </VBox>

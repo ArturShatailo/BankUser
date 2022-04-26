@@ -9,9 +9,9 @@ public class Transaction {
     private String userLogin;
     private String from;
     private String to;
-    private String amount;
+    private Double amount;
 
-    public Transaction(String number, String date, String userLogin, String from, String to, String amount) {
+    public Transaction(String number, String date, String userLogin, String from, String to, Double amount) {
         this.number = number;
         this.date = date;
         this.userLogin = userLogin;

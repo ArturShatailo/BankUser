@@ -5,6 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.Scanner;
@@ -12,30 +13,61 @@ import java.util.Scanner;
 public class Tech {
 
 
-    public static void NewWindow(URL application, String title){
+    public static void NewWindow(URL application, String title, Stage stage){
+
         try{
+
             FXMLLoader fxmlLoader = new FXMLLoader(application);
             Scene scene = new Scene(fxmlLoader.load(), 520, 540);
-            Stage loginStage = new Stage();
-            loginStage.setTitle(title);
-            loginStage.setScene(scene);
-            loginStage.show();
+            stage.setTitle(title);
+            stage.setScene(scene);
+            stage.show();
         }
         catch (Exception exception){
             exception.printStackTrace();
         }
     }
 
-    public static void NewAreaWindow(URL application, String title, User user){
+    public static void NewWindowStage(URL application, String title){
+
+        try{
+
+            FXMLLoader fxmlLoader = new FXMLLoader(application);
+            Scene scene = new Scene(fxmlLoader.load(), 520, 540);
+            Stage stage = new Stage();
+            stage.setTitle(title);
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch (Exception exception){
+            exception.printStackTrace();
+        }
+    }
+
+    public static void NewAreaWindow(URL application, String title, User user, Stage stage){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(application);
             Scene scene = new Scene(fxmlLoader.load(), 520, 540);
-            Stage loginStage = new Stage();
-            loginStage.setTitle(title);
-            loginStage.setScene(scene);
+            stage.setTitle(title);
+            stage.setScene(scene);
             PersonalAreaData personalArea = fxmlLoader.getController();
             personalArea.PersonalArea(user);
-            loginStage.show();
+            stage.show();
+        }
+        catch (Exception exception){
+            exception.printStackTrace();
+        }
+    }
+
+    public static void NewSendWindow(URL application, String title, User user, Stage stage){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(application);
+            Scene scene = new Scene(fxmlLoader.load(), 520, 540);
+            stage.setTitle(title);
+            stage.setScene(scene);
+            SendFundsData sendFunds = fxmlLoader.getController();
+            sendFunds.SendFundsInfo(user);
+            stage.show();
         }
         catch (Exception exception){
             exception.printStackTrace();

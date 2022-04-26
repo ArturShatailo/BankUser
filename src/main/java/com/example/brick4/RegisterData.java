@@ -1,7 +1,9 @@
 package com.example.brick4;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
@@ -18,15 +20,11 @@ public class RegisterData {
     private TextField PasswordRegConfirmValue;
     @FXML
     public Label PasswordLabel;
-
+    @FXML
+    public Button registrationButton;
 
     @FXML
     protected void registrationButton() {
-
-        Bot.CreateBot("email@email.com", "123qwe", "Arnold");
-        Bot.CreateBot("user@email.com", "qwerty", "Boris");
-        Bot.CreateBot("myemail@email.com", "C234f45trDWE", "Max");
-
 
         //Validation system that I created is not perfect :)
 
@@ -50,7 +48,8 @@ public class RegisterData {
         if(validator){
 
             CreateUser.createUser(EmailRegValue.getText(), PasswordRegValue.getText(), false, NameRegValue.getText());
-            Tech.NewWindow(getClass().getResource("login-page.fxml"), "Login page");
+            Stage currentStage = (Stage) registrationButton.getScene().getWindow();
+            Tech.NewWindow(getClass().getResource("login-page.fxml"), "Login page", currentStage);
 
         }
     }

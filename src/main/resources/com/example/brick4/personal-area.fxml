@@ -32,5 +32,10 @@
             <Insets bottom="5.0" top="5.0"/>
         </padding>
         <Label fx:id="TransactionsAreaLabel"></Label>
+        <padding>
+            <Insets bottom="5.0" top="5.0"/>
+        </padding>
+        <Button fx:id="logoutButton" text="Log out" onAction="#logoutButton"/>
+        <Button fx:id="sendFundsButton" text="Send funds" onAction="#sendFundsButton"/>
 
 </VBox>

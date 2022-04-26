@@ -14,7 +14,7 @@ public class CardNumber {
 
     @Override
     public String toString(){
-        return prefix + personalNumber+" ("+userLogin+")";
+        return prefix + personalNumber;
     }
 
     public static String numberCreator(){

@@ -12,9 +12,13 @@ public class TransactionsHistory {
         this.transactionsHistory = transactionsHistory;
     }
 
+    public ArrayList getTransactionsHistory() {
+        return transactionsHistory;
+    }
+
     @Override
     public String toString(){
-        return "History: "+transactionsHistory;
+        return transactionsHistory+"\n";
     }
 
 }

@@ -1,8 +1,10 @@
 package com.example.brick4;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
@@ -16,6 +18,8 @@ public class LoginData {
     @FXML
     private Label MessageValue;
 
+    @FXML
+    private Button loginButton;
 
     @FXML
     protected void loginButton() {
@@ -27,7 +31,9 @@ public class LoginData {
                 if(CreateUser.getUsersArray().get(i).getPassword().equals(PasswordValue.getText())){
 
                     CreateUser.getUsersArray().get(i).status = true;
-                    Tech.NewAreaWindow(getClass().getResource("personal-area.fxml"), "personal-area", CreateUser.getUsersArray().get(i));
+                    Stage currentStage = (Stage) loginButton.getScene().getWindow();
+                    Tech.NewAreaWindow(getClass().getResource("personal-area.fxml"), "personal-area", CreateUser.getUsersArray().get(i), currentStage);
+                    System.out.println("/////////\n"+CreateUser.getUsersArray().toString());
                     break;
 
                 }else{
@@ -37,7 +43,6 @@ public class LoginData {
             }else{
                 MessageValue.setText("Wrong password or email");
             }
-
         }
     }
 }
