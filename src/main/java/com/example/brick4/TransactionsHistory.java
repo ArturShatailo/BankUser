@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class TransactionsHistory {
 
     private String userLogin;
-    private ArrayList transactionsHistory;
+    private MyArrayList transactionsHistory;
 
-    public TransactionsHistory(String userLogin, ArrayList transactionsHistory) {
+    public TransactionsHistory(String userLogin, MyArrayList transactionsHistory) {
         this.userLogin = userLogin;
         this.transactionsHistory = transactionsHistory;
     }
 
-    public ArrayList getTransactionsHistory() {
+    public MyArrayList getTransactionsHistory() {
         return transactionsHistory;
     }
 

@@ -5,16 +5,14 @@ import java.util.ArrayList;
 public class User extends Persona{
 
     private String name;
-    private Object cardNumber;
-    private Double cardBalance;
+    private ArrayList<Card> cards;
     private TransactionsHistory transactionsHistory;
 
 
-    public User(String email, String password, boolean status, String name, Object cardNumber, Double cardBalance, TransactionsHistory transactionsHistory) {
+    public User(String email, String password, boolean status, String name, ArrayList<Card> cards, TransactionsHistory transactionsHistory) {
         super(email, password, status);
         this.name = name;
-        this.cardNumber = cardNumber;
-        this.cardBalance = cardBalance;
+        this.cards = cards;
         this.transactionsHistory = transactionsHistory;
     }
 
@@ -26,20 +24,12 @@ public class User extends Persona{
         this.name = name;
     }
 
-    public Object getCardNumber() {
-        return cardNumber;
+    public ArrayList<Card> getCards() {
+        return cards;
     }
 
-    public void setCardNumber(Object cardNumber) {
-        this.cardNumber = cardNumber;
-    }
-
-    public Double getCardBalance() {
-        return cardBalance;
-    }
-
-    public void setCardBalance(Double cardBalance) {
-        this.cardBalance = cardBalance;
+    public void setCards(ArrayList cards) {
+        this.cards = cards;
     }
 
     public TransactionsHistory getTransactionsHistory() {
@@ -52,7 +42,7 @@ public class User extends Persona{
 
     @Override
     public String toString(){
-        return "email: "+ getEmail() + "\npassword: "+getPassword()+"\nname: "+name+"\ncard number: "+ cardNumber+"\nbalance: "+ cardBalance+"\ntransaction history: "+ transactionsHistory+ "\nstatus: "+ status+"\n\n";
+        return "email: "+ getEmail() + "\npassword: "+getPassword()+"\nname: "+name+"\ncards: "+ cards.toString()+"\ntransaction history: "+ transactionsHistory+ "\nstatus: "+ status+"\n\n";
     }
 
 

@@ -22,6 +22,6 @@
 
     <Label fx:id="MessageRegValue"></Label>
     <Label>Hello, please choose the action</Label>
-    <Button text="Registration" onAction="#startRegistrationButton"/>
-    <Button text="Login" onAction="#startLoginButton"/>
+    <Button fx:id="startRegistrationButton" text="Registration" onAction="#startRegistrationButton"/>
+    <Button fx:id="startLoginButton" text="Login" onAction="#startLoginButton"/>
 </VBox>

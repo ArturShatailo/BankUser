@@ -24,9 +24,6 @@ public class PersonalAreaData {
     private Label EmailAreaLabel;
 
     @FXML
-    private Label BalanceAreaLabel;
-
-    @FXML
     private Button logoutButton;
 
     @FXML
@@ -37,9 +34,8 @@ public class PersonalAreaData {
      public void PersonalArea(User user) {
 
          NameAreaLabel.setText("Name:  "+user.getName());
-         CardAreaLabel.setText("Card number:  "+user.getCardNumber().toString());
+         CardAreaLabel.setText("Card number:  "+user.getCards().toString());
          EmailAreaLabel.setText("Email:  "+user.getEmail());
-         BalanceAreaLabel.setText("Balance:  "+user.getCardBalance().toString());
          TransactionsAreaLabel.setText("Transactions history:\n"+user.getTransactionsHistory().toString());
 
          currentUser = user;

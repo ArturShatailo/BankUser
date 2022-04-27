@@ -1,12 +1,11 @@
 package com.example.brick4;
 
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -62,7 +61,7 @@ public class Tech {
     public static void NewSendWindow(URL application, String title, User user, Stage stage){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(application);
-            Scene scene = new Scene(fxmlLoader.load(), 520, 540);
+            Scene scene = new Scene(fxmlLoader.load(), 520, 640);
             stage.setTitle(title);
             stage.setScene(scene);
             SendFundsData sendFunds = fxmlLoader.getController();
@@ -76,18 +75,6 @@ public class Tech {
 
 
     //"GetInputFunction" is a scanner of input that returns integer number entered by user
-    public static int GetInputFunction(){
-        Scanner scan = new Scanner(System.in);
-        int inputData = scan.nextInt();
-        return inputData;
-    }
-
-    //"GetInputFunction" is a scanner of input that returns String entered by user
-    public static String GetInputStringFunction(){
-        Scanner scan = new Scanner(System.in);
-        String inputData = scan.nextLine();
-        return inputData;
-    }
 
     //Method that adds set(specific) Objects into a set(specific) List and returns this completed List back.
     public static List addToList(Object objectName, List listName){

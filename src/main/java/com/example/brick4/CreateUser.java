@@ -10,14 +10,16 @@ public class CreateUser {
         return usersArray;
     }
 
-
     public static void createUser(String email, String password, boolean status, String name){
 
         TransactionsHistory transactionsHistory = new TransactionsHistory(email, Transaction.createTransactionsList());
+        CardNumber cardNumberU = new CardNumber("8890", CardNumber.numberCreator(), email);
+        CardNumber cardNumberE = new CardNumber("8890", CardNumber.numberCreator(), email);
+        Card cardU = new Card(cardNumberU.toString(), "USD", 0.0, email);
+        Card cardE = new Card(cardNumberE.toString(), "EUR", 0.0, email);
+        MyArrayList cards =  Card.CreateCardList(cardU, cardE);
 
-        CardNumber cardNumber = new CardNumber("8890", CardNumber.numberCreator(), email);
-
-        User user = new User(email, password, status, name, cardNumber, 0.0, transactionsHistory);
+        User user = new User(email, password, status, name, cards, transactionsHistory);
 
         usersArray.add(user);
     }
