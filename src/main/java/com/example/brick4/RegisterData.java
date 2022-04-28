@@ -47,8 +47,11 @@ public class RegisterData {
         }
         if(validator){
 
+            //Creating a new User with all set data. After that, this User will be added to Array (database)
             CreateUser.createUser(EmailRegValue.getText(), PasswordRegValue.getText(), false, NameRegValue.getText());
+            //Get a current Stage
             Stage currentStage = (Stage) registrationButton.getScene().getWindow();
+            //Open a Scene with Login page
             Tech.NewWindow(getClass().getResource("login-page.fxml"), "Login page", currentStage);
 
         }

@@ -31,6 +31,7 @@ public class PersonalAreaData {
 
     private static User currentUser;
 
+    //Method gets USer Object to fill out the fields in Personal Area information
      public void PersonalArea(User user) {
 
          NameAreaLabel.setText("Name:  "+user.getName());
@@ -44,24 +45,25 @@ public class PersonalAreaData {
     @FXML
     public void logoutButton() {
 
+         //Logout with set status field in User Object with false
         for(int i=0; i<CreateUser.getUsersArray().size(); i++){
             if (CreateUser.getUsersArray().get(i).getEmail().equals(currentUser.getEmail())){
                 CreateUser.getUsersArray().get(i).status = false;
             }
         }
 
+        //Transfer to Login page
         Stage currentStage = (Stage) logoutButton.getScene().getWindow();
         Tech.NewWindow(getClass().getResource("login-page.fxml"), "Login page", currentStage);
-        System.out.println("/////////\n"+CreateUser.getUsersArray().toString());
 
     }
 
     @FXML
     public void sendFundsButton() {
 
+         //Transfer to Send Funds page
         Stage currentStage = (Stage) sendFundsButton.getScene().getWindow();
         Tech.NewSendWindow(getClass().getResource("send-funds.fxml"), "Send funds", currentUser, currentStage);
-        System.out.println("/////////\n"+CreateUser.getUsersArray().toString());
 
     }
 

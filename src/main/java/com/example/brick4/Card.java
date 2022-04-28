@@ -24,6 +24,8 @@ public class Card {
         return "\n#"+ cardNumber + ", Currency: "+cardCurrency+", Balance: "+funds;
     }
 
+
+    //Object User has card list that include all Cards of this User. This method created 2 cards initially during the registration
     public static MyArrayList CreateCardList(Card cardU, Card cardE){
         MyArrayList cards = new MyArrayList();
         cards.add(cardU);

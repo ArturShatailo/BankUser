@@ -17,6 +17,8 @@ public class CardNumber {
         return prefix + personalNumber;
     }
 
+
+    //Creating a Card Number main part (there is also prefix) on a random base (12 digits).
     public static String numberCreator(){
 
         String cardRandom = "";
@@ -24,7 +26,6 @@ public class CardNumber {
             Integer random = Tech.getRandom(0, 9);
             cardRandom+=random.toString();
         }
-
 
         return cardRandom;
     }

@@ -20,11 +20,14 @@ public class Transaction {
         this.amount = amount;
     }
 
+
     @Override
     public String toString(){
         return "#"+ number + ", date: "+date+", from "+from+" to "+ to +", amount: "+ amount+"\n";
     }
 
+
+    //Object user has ArrayList of its transactions that is created in the following method:
     public static MyArrayList createTransactionsList(){
         MyArrayList transactionsHistory = new MyArrayList ();
         return transactionsHistory;

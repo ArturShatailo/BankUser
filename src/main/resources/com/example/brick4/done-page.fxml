@@ -10,20 +10,16 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.PasswordField?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.brick4.LoginData">
+      fx:controller="com.example.brick4.DoneData">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
-    <Label>Please sign up
+    <Label>Done
         <padding>
             <Insets bottom="10.0" top="10.0"/>
         </padding>
     </Label>
-        <Label fx:id="MessageValue"></Label>
-    <Label>Email:</Label>
-        <TextField fx:id="EmailValue"></TextField>
-    <Label>Password:</Label>
-        <PasswordField fx:id="PasswordValue"></PasswordField>
-    <Button fx:id="loginButton" text="Login" onAction="#loginButton"/>
-    <Button fx:id="loginBackButton" text="Go back" onAction="#loginBackButton"/>
+        <Label fx:id="MessageDoneValue">The transfer has been successfully done</Label>
+
+    <Button fx:id="doneCloseButton" text="Close" onAction="#doneCloseButton"/>
 </VBox>

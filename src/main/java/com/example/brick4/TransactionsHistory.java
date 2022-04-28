@@ -12,6 +12,7 @@ public class TransactionsHistory {
         this.transactionsHistory = transactionsHistory;
     }
 
+    //This array is used instead of database. Each User has own TransactionsHistory ArrayList that includes all User's transactions
     public MyArrayList getTransactionsHistory() {
         return transactionsHistory;
     }

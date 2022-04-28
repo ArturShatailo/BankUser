@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 class MyArrayList extends ArrayList {
 
+    //I create a new Class with my own toString for ArrayList
     @Override
     public String toString() {
         String result = "";

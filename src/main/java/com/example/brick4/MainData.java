@@ -9,18 +9,18 @@ import javafx.stage.Stage;
 
 public class MainData {
 
-
     @FXML
     private Button startRegistrationButton;
 
     @FXML
     private Button startLoginButton;
 
-
     @FXML
     protected void startRegistrationButton() {
 
+        //Get the current Stage
         Stage currentStage = (Stage) startRegistrationButton.getScene().getWindow();
+        //Call a NewWindow method with set parameters of the necessary page
         Tech.NewWindow(getClass().getResource("register-page.fxml"), "Registration page", currentStage);
 
     }
@@ -28,7 +28,9 @@ public class MainData {
     @FXML
     protected void startLoginButton() {
 
+        //Get the current Stage
         Stage currentStage = (Stage) startLoginButton.getScene().getWindow();
+        //Call a NewWindow method with set parameters of the necessary page
         Tech.NewWindow(getClass().getResource("login-page.fxml"), "Login page", currentStage);
 
     }

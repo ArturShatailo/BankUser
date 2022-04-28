@@ -20,24 +20,12 @@ public class User extends Persona{
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public ArrayList<Card> getCards() {
         return cards;
     }
 
-    public void setCards(ArrayList cards) {
-        this.cards = cards;
-    }
-
     public TransactionsHistory getTransactionsHistory() {
         return transactionsHistory;
-    }
-
-    public void setTransactionsHistory(TransactionsHistory transactionsHistory) {
-        this.transactionsHistory = transactionsHistory;
     }
 
     @Override

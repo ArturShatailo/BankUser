@@ -21,6 +21,7 @@ public class MainApplication extends Application {
 
     public static void main(String[] args) {
 
+        //Creating 3 Bot Objects
         Bot.CreateBot("email@email.com", "123qwe", "Arnold");
         Bot.CreateBot("user@email.com", "qwerty", "Boris");
         Bot.CreateBot("myemail@email.com", "C234f45trDWE", "Max");

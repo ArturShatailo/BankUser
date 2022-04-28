@@ -12,10 +12,10 @@ import java.util.Scanner;
 public class Tech {
 
 
+    //Method for new Scene open in the same window (Stage)
     public static void NewWindow(URL application, String title, Stage stage){
 
         try{
-
             FXMLLoader fxmlLoader = new FXMLLoader(application);
             Scene scene = new Scene(fxmlLoader.load(), 520, 540);
             stage.setTitle(title);
@@ -27,10 +27,11 @@ public class Tech {
         }
     }
 
+
+    //Method for new Stage open with new Scene
     public static void NewWindowStage(URL application, String title){
 
         try{
-
             FXMLLoader fxmlLoader = new FXMLLoader(application);
             Scene scene = new Scene(fxmlLoader.load(), 520, 540);
             Stage stage = new Stage();
@@ -43,6 +44,7 @@ public class Tech {
         }
     }
 
+    //Method for new Scene of Personal Area open with custom method using for uploading data from "database" into fxml
     public static void NewAreaWindow(URL application, String title, User user, Stage stage){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(application);
@@ -58,6 +60,7 @@ public class Tech {
         }
     }
 
+    //Method for new Scene of Send Funds open with custom method using for uploading data from "database" into fxml
     public static void NewSendWindow(URL application, String title, User user, Stage stage){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(application);

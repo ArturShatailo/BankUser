@@ -72,13 +72,21 @@ public class SendFundsData {
     @FXML
     public void backButton() {
         Stage currentStage = (Stage) MessageSendValue.getScene().getWindow();
-        Tech.NewAreaWindow(getClass().getResource("personal-area.fxml"), "personal-area", currentUser, currentStage);
+
+        for(int i=0; i<CreateUser.getUsersArray().size(); i++){
+            if (CreateUser.getUsersArray().get(i).getEmail().equals(currentUser.getEmail())){
+
+                Tech.NewAreaWindow(getClass().getResource("personal-area.fxml"), "personal-area", CreateUser.getUsersArray().get(i), currentStage);
+
+            }
+        }
     }
 
     @FXML
     public void doSendFundsButton() {
         Double amount = Double.parseDouble(AmountRegValue.getText());
-        Transaction transaction = new Transaction("12", LocalDate.now().toString(), currentUser.getEmail(), currentUser.getEmail(), CardResRegValue.getText(), amount);
+
+        Transaction transaction = new Transaction("12", LocalDate.now().toString(), currentCard.getCardNumber(), currentUser.getEmail(), CardResRegValue.getText(), amount);
 
 
         boolean sendValidator;
@@ -97,8 +105,9 @@ public class SendFundsData {
                     CreateUser.getUsersArray().get(i).getTransactionsHistory().getTransactionsHistory().add(transaction);
 
                     for(int k=0; k<CreateUser.getUsersArray().get(i).getCards().size(); k++){
-                        if (CreateUser.getUsersArray().get(i).getCards().get(k).cardNumber.equals(currentCard)) {
-                            CreateUser.getUsersArray().get(i).getCards().get(k).funds -= (currentCard.funds-amount);
+                        if (CreateUser.getUsersArray().get(i).getCards().get(k).cardNumber.equals(currentCard.cardNumber)) {
+                            CreateUser.getUsersArray().get(i).getCards().get(k).funds = (currentCard.funds-amount);
+                            BalanceSendLabel.setText("with balance "+currentCard.cardCurrency + CreateUser.getUsersArray().get(i).getCards().get(k).funds);
                         }
                     }
                 }
@@ -114,8 +123,8 @@ public class SendFundsData {
                 }
             }
 
-            //System.out.println("/////////\n"+CreateUser.getUsersArray());
+            Tech.NewWindowStage(getClass().getResource("done-page.fxml"), "Done");
+            System.out.println("/////////\n"+CreateUser.getUsersArray());
         }
     }
-
 }
